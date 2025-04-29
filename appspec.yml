@@ -9,7 +9,7 @@ permissions:
   - object: /home/ubuntu/react-app
     owner: ubuntu
     group: ubuntu
-    mode: 755
+    mode: 777
     type:
       - directory
       - file
