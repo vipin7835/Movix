@@ -3,10 +3,10 @@ os: linux
 
 files:
   - source: /
-    destination: /home/ubuntu/react-app
+    destination: /home/ubuntu/reactapp
 
 permissions:
-  - object: /home/ubuntu/react-app
+  - object: /home/ubuntu/reactapp
     owner: ubuntu
     group: ubuntu
     mode: 775
