@@ -1,5 +1,6 @@
 version: 0.0
-os: ubuntu
+os: linux
+
 files:
   - source: /
     destination: /home/ubuntu/react-app
@@ -12,19 +13,3 @@ permissions:
     type:
       - directory
       - file
-
-hooks:
-  BeforeInstall:
-    - location: scripts/clean.sh
-      timeout: 300
-      runas: ubuntu
-
-  AfterInstall:
-    - location: scripts/install_dependencies.sh
-      timeout: 300
-      runas: ubuntu
-
-  ApplicationStart:
-    - location: scripts/start.sh
-      timeout: 300
-      runas: ubuntu
