@@ -2,10 +2,10 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/my-react-app
+    destination: /home/ubuntu/react-app
 
 permissions:
-  - object: /home/ubuntu/my-react-app
+  - object: /home/ubuntu/react-app
     owner: ubuntu
     group: ubuntu
     mode: 755
