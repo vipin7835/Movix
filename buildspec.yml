@@ -21,9 +21,10 @@ phases:
   post_build:
     commands:
       - echo Build completed successfully.
+      - echo Preparing deployment package...
 
 artifacts:
   files:
-    - '**/*'
-  base-directory: build
-  discard-paths: yes
+    - appspec.yml
+    - build/**/*
+  discard-paths: no
