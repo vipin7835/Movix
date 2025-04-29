@@ -11,7 +11,7 @@ phases:
   pre_build:
     commands:
       - echo Running tests...
-      - npm test || echo "Tests failed (optional step, continuing anyways)"
+      - npm test || echo "Tests failed (optional step, continuing anyway)"
 
   build:
     commands:
