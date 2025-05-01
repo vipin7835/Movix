@@ -1,15 +1,23 @@
-version: 0.0
-os: linux
+version: 0.2
 
-files:
-  - source: /
-    destination: /home/ubuntu/movix
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - echo Installing dependencies...
+      - npm ci
 
-permissions:
-  - object: /home/ubuntu/movix
-    owner: ubuntu
-    group: ubuntu
-    mode: 775
-    type:
-      - directory
-      - file
+  build:
+    commands:
+      - echo Building React app...
+      - npm run build
+      - echo Copying build files...
+      - cp -r build/ ./  # move build content up if needed
+
+artifacts:
+  files:
+    - appspec.yml
+    - scripts/**/*
+    - build/**/*
+  discard-paths: no
