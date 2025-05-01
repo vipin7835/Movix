@@ -13,12 +13,9 @@ phases:
       - echo Building the React app...
       - npm run build
 
-  post_build:
-    commands:
-      - echo Build completed successfully.
-
 artifacts:
   files:
-    - '**/*'
-  base-directory: build
-  discard-paths: yes
+    - appspec.yml
+    - scripts/**/*
+    - build/**/*
+  discard-paths: no
