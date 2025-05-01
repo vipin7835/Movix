@@ -3,10 +3,10 @@ os: linux
 
 files:
   - source: /
-    destination: /home/ubuntu/reactapp
+    destination: /home/ubuntu/movix
 
 permissions:
-  - object: /home/ubuntu/reactapp
+  - object: /home/ubuntu/movix
     owner: ubuntu
     group: ubuntu
     mode: 775
