@@ -8,11 +8,6 @@ phases:
       - echo Installing dependencies...
       - npm ci
 
-  pre_build:
-    commands:
-      - echo Running tests...
-      - npm test || echo "Tests failed (optional step, continuing anyways)"
-
   build:
     commands:
       - echo Building the React app...
@@ -21,10 +16,9 @@ phases:
   post_build:
     commands:
       - echo Build completed successfully.
-      - echo Preparing deployment package...
 
 artifacts:
   files:
-    - appspec.yml
-    - build/**/*
-  discard-paths: no
+    - '**/*'
+  base-directory: build
+  discard-paths: yes
