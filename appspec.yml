@@ -8,10 +8,11 @@ hooks:
   AfterInstall:
     - runas: root
       timeout: 60
-      location: ""
       command: |
         systemctl stop node.service || true
         systemctl daemon-reexec
         systemctl daemon-reload
         systemctl start node.service
         systemctl enable node.service
+
+
