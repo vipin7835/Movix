@@ -3,8 +3,15 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/Movix
+
 hooks:
   AfterInstall:
-    - location: scripts/start_pm2.sh
+    - runas: root
       timeout: 60
-      runas: ubuntu
+      location: ""
+      command: |
+        systemctl stop node.service || true
+        systemctl daemon-reexec
+        systemctl daemon-reload
+        systemctl start node.service
+        systemctl enable node.service
