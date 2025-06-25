@@ -7,7 +7,7 @@ files:
 hooks:
   AfterInstall:
     - runas: root
-      timeout: 60
+      timeout: 300
       command: chmod +x scripts/start_pm2.sh
       location: scripts/start_pm2.sh
 
