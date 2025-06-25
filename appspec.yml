@@ -8,4 +8,7 @@ hooks:
   AfterInstall:
     - runas: root
       timeout: 60
+      command: chmod +x /home/ubuntu/Movix/scripts/start_pm2.sh
+    - runas: root
+      timeout: 60
       location: /home/ubuntu/Movix/scripts/start_pm2.sh
