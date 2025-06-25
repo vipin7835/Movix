@@ -8,11 +8,4 @@ hooks:
   AfterInstall:
     - runas: root
       timeout: 60
-      command: |
-        systemctl stop node.service || true
-        systemctl daemon-reexec
-        systemctl daemon-reload
-        systemctl start node.service
-        systemctl enable node.service
-
-
+      location: /home/ubuntu/Movix/scripts/start_pm2.sh
