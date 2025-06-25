@@ -4,4 +4,5 @@
 cd /var/www/html/Movix || exit
 
 # Run the npm build command with sudo
+sudo npm i
 sudo npm run build
